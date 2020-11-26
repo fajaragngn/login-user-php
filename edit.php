@@ -106,13 +106,15 @@ $hash = md5( strtolower( trim( $email ) ) );
 
 <h1>Hi there.</h1>
 
-<div style="padding-left: 25px; padding-right: 25px;" class="container heroo">
+<div class="user-button">
     <section class="columns hero">
     <div class="judul-kelas" >
         <h3>
-           <img class="" style="border-radius: 50%" width="90px" src="<?php echo $grav_url; ?>" > <small>*Ubah avatar di <a href="">gravatar.com</a></small>
+           <img class="" style="border-radius: 50%" width="90px" src="<?php echo $grav_url; ?>" > 
+           <br>
+           <small>*Ubah avatar di <a href="">gravatar.com</a></small>
            <br><br>
-           <?php echo $username;?>
+           Username : <?php echo $username;?>
 
        </h3>
     </div>
@@ -120,34 +122,25 @@ $hash = md5( strtolower( trim( $email ) ) );
     </section>
 </div>
 
-<div style="top: -40px" class="cards">
-    <h2>Ubah Password</h2><br>
-      <form class="form v-group-s mt10" method="POST" action="">
-        <input type="hidden" name="_token" value="GpL52TtG0VYC0Co0J0m06qIJtyIrEZGMQC7lbaap">
+    <h2 align="center" >Ubah Password</h2>
+    <div class="user-button" >
+      <form class="" method="POST" action="">
         <input type="hidden" name="_method" value="PUT">
-             
-      <div class="input-wrapper ">
-        <label for="password" class="label"> Password Lama</label>
+
         <input class="input" type="password" name="password_lama" required>    
-      </div>
-      <br>
-        <p id="warning_password" class="warning is-hidden"></p>                   
-      <div class="input-wrapper ">
-        <label for="new_password" class="label"> Password baru </label>
-        <input placeholder="5-20 characters long." class="input" type="password" name="password_baru" required>    
-      </div><br>
-      <div class="input-wrapper ">
-        <label for="new_password" class="label">Konfirmasi password baru </label>
+
+      <br><br>
+
+        <input placeholder="5-20 characters long." class="input" type="password" name="password_baru" required>
+        <br><br>
           <input class="input" type="password" name="konfirmasi_password" required>    
-      </div>
-      <br>
+      <br><br>
         <p id="warning_new_password" class="warning is-hidden"></p>
         <input class="button is-primary" type="submit" name="submit" value="Simpan">
       </form>     
     </div>
 
-
-<small><i>Catatan: untuk memunculkan gambar silahkan daftar di gravatar terlebih dahulu melalui email yang sudah terdaftar.</small></i>
+<small><i>* Minimal 5 character</small></i>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

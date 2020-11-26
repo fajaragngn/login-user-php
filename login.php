@@ -40,7 +40,7 @@
 
         <!-- Login Form -->
     <form class="user-button" action="proseslogin.php" method="post">
-      <input type="text" id="login" class="fadeIn second" name="email" placeholder="login"><br><br>
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="email"><br><br>
       <input type="text" id="password" class="fadeIn third" name="password" placeholder="password"><br><br>
       <input type="submit" class="fadeIn fourth" value="login">
     </form>
