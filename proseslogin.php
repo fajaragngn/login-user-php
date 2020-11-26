@@ -1,17 +1,37 @@
-<style type="text/css">
-      .alert{
-        width: 40%;
-        margin: 0% auto;
-        top: 10px
-      }
-      @media screen and (max-width: 768px) {
-        .alert{
-        width: 90%;
-        }
-      }
 
-    </style>
-<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Simple login php</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+  <div>
+    <a href="/">/@fajar.agngn</a>
+  </div>
+  <div id=theme>
+      <div onclick=setDarkMode(true) id=darkBtn>
+          <a>dark/</a>
+        </div>
+      <div onclick=setDarkMode(false) id=lightBtn class=is-hidden>
+          <a>/light</a>
+      </div>
+    </div>
+</header><br>
+
+<h1>Hi there.</h1>
+
 <?php
    session_start();
    require_once("koneksi.php");
@@ -34,3 +54,10 @@
      }
    }
 ?>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
