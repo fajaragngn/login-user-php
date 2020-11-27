@@ -51,7 +51,7 @@ $hash = md5( strtolower( trim( $email ) ) );
     </div>
 </header><br>
 
-<h1>Hi there.</h1>
+<h1>Halo <?php echo $username; ?></h1>
 
 
 

@@ -9,7 +9,69 @@ if(!isset($_SESSION['email'])) {
 }
 $hash = md5( strtolower( trim( $email ) ) );
         $grav_url = "https://www.gravatar.com/avatar/" . $hash . "?s=&d=mp";
+  ?>
 
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>edit</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header>
+  <div>
+    <a href="index">/kembali</a>
+  </div>
+  <div id=theme>
+      <div onclick=setDarkMode(true) id=darkBtn>
+          <a>dark/</a>
+        </div>
+      <div onclick=setDarkMode(false) id=lightBtn class=is-hidden>
+          <a>/light</a>
+      </div>
+    </div>
+</header><br>
+
+<h1>Hi there.</h1>
+
+<div class="user-button">
+  <h3>
+     <img class="" style="border-radius: 50%" width="90px" src="<?php echo $grav_url; ?>" > 
+     <br>
+     <small>*Ubah avatar di <a href="">gravatar.com</a></small>
+     <br><br>
+     Username : <?php echo $username;?>
+
+ </h3>
+</div>
+
+    <h2 align="center" >Ubah Password</h2>
+    <div class="user-button" >
+      <form class="" method="POST" action="">
+        <input type="hidden" name="_method" value="PUT">
+
+        <input class="input" type="password" name="password_lama" required>    
+
+      <br><br>
+
+        <input placeholder="5-20 characters long." class="input" type="password" name="password_baru" required>
+        <br><br>
+          <input class="input" type="password" name="konfirmasi_password" required>    
+      <br><br>
+        <p id="warning_new_password" class="warning is-hidden"></p>
+        <input class="button is-primary" type="submit" name="submit" value="Simpan">
+      </form>
+       <?php
   //mengatasi error notice dan warning
   //error ini biasa muncul jika dijalankan di localhost, jika online tidak ada masalah
   error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
@@ -68,79 +130,8 @@ $hash = md5( strtolower( trim( $email ) ) );
     }
   }
   ?>
-
-
-
-
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Simple login php</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="favicon.ico" rel="icon">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-</head>
-<body>
-
-  <header>
-  <div>
-    <a href="/">/@fajar.agngn</a>
-  </div>
-  <div id=theme>
-      <div onclick=setDarkMode(true) id=darkBtn>
-          <a>dark/</a>
-        </div>
-      <div onclick=setDarkMode(false) id=lightBtn class=is-hidden>
-          <a>/light</a>
-      </div>
+     
     </div>
-</header><br>
-
-<h1>Hi there.</h1>
-
-<div class="user-button">
-    <section class="columns hero">
-    <div class="judul-kelas" >
-        <h3>
-           <img class="" style="border-radius: 50%" width="90px" src="<?php echo $grav_url; ?>" > 
-           <br>
-           <small>*Ubah avatar di <a href="">gravatar.com</a></small>
-           <br><br>
-           Username : <?php echo $username;?>
-
-       </h3>
-    </div>
-  
-    </section>
-</div>
-
-    <h2 align="center" >Ubah Password</h2>
-    <div class="user-button" >
-      <form class="" method="POST" action="">
-        <input type="hidden" name="_method" value="PUT">
-
-        <input class="input" type="password" name="password_lama" required>    
-
-      <br><br>
-
-        <input placeholder="5-20 characters long." class="input" type="password" name="password_baru" required>
-        <br><br>
-          <input class="input" type="password" name="konfirmasi_password" required>    
-      <br><br>
-        <p id="warning_new_password" class="warning is-hidden"></p>
-        <input class="button is-primary" type="submit" name="submit" value="Simpan">
-      </form>     
-    </div>
-
-<small><i>* Minimal 5 character</small></i>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
